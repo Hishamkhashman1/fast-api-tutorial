@@ -7,7 +7,7 @@ app = FastAPI()
 items = []
 
 @app.get("/")
-def root():
+async def root():
     return {"hey":"guys"}
 
 # Endpoint to create items by using an http POST

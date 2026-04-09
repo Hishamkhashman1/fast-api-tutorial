@@ -7,7 +7,7 @@ Inititate a venv , I highly recommend doing it this way
 
 To run app
 
- uvicorn main:app --reload_
+ uvicorn main:app --reload
 
  terminal will indicate local server running app
 
