@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fast-api-tutorial"
+version = "0.0.1"
+description = "FastAPI tutorial"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["fastapi", "tutorial"]
+authors = [
+	{ name = "Hishamkhashman1", email = "hisham.khashman@gmail.com" }
+]
+
+[tool.fastapi]
+entrypoint = "main:app"
+

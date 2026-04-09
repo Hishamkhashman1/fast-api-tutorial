@@ -27,7 +27,17 @@ This schema definition includes your API paths, the possible parameters they tak
 
 OpenAPI Repo: https://github.com/OAI/OpenAPI-Specification
 
-Check the openapi.json¶
+Check the openapi.json
 If you are curious about how the raw OpenAPI schema looks like, FastAPI automatically generates a JSON (schema) with the descriptions of all your API.
 
 You can see it directly at: http://127.0.0.1:8000/openapi.json. (recommended: check "pretty print" box for better visuals.)
+
+Configure the app entrypoint in pyproject.toml (create a pyproject.toml in directory touch pyproject.toml)
+
+to read more about pyproject.toml (recommended reading) --> https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+You can configure where your app is located in a pyproject.toml file like:
+
+
+[tool.fastapi]
+entrypoint = "main:app"
