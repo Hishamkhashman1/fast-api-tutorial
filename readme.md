@@ -27,5 +27,7 @@ This schema definition includes your API paths, the possible parameters they tak
 
 OpenAPI Repo: https://github.com/OAI/OpenAPI-Specification
 
-curl -X POST -H "Content-Type: application/json" 'http://127.0.0.1:8000/items?item=apple'
-curl -X GET http://127.0.0.1:8000/items/0
+Check the openapi.json¶
+If you are curious about how the raw OpenAPI schema looks like, FastAPI automatically generates a JSON (schema) with the descriptions of all your API.
+
+You can see it directly at: http://127.0.0.1:8000/openapi.json. (recommended: check "pretty print" box for better visuals.)
