@@ -21,3 +21,5 @@ async def root():
 @app.get("/charecters/{charecter_id}")
 async def get_char(charecter_id: int):
     return {"charecter_id": charecter_id}
+
+

@@ -46,3 +46,12 @@ entrypoint = "main:app"
 Path Parameters in FastAPI
 
 You can declare path parameters or variables to your API endpoints by using the @path operation decorator. same syntax as python format strings
+
+Setting type (int, str etc.) is important if you want to validate your input and ge some useful error messages.
+
+ORDER MATTERS
+
+When creating path operations you need to declare them in order from most specific to least specific. similarly you cannot redefine a path operation with the same path, the first one will be used since the path matches first.
+
+
+
