@@ -16,6 +16,8 @@ async def root():
     # FastAPI automatically converts this python dictionary to JSON format and sends it as the HTTP response
     return {"hello":"from","fastapi":"world"}
 
+#Path parameters with type example
+
 @app.get("/charecters/{charecter_id}")
-async def get_char(charecter_id):
+async def get_char(charecter_id: int):
     return {"charecter_id": charecter_id}

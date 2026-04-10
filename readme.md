@@ -41,3 +41,8 @@ You can configure where your app is located in a pyproject.toml file like:
 
 [tool.fastapi]
 entrypoint = "main:app"
+
+
+Path Parameters in FastAPI
+
+You can declare path parameters or variables to your API endpoints by using the @path operation decorator. same syntax as python format strings
