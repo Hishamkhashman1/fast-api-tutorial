@@ -65,4 +65,6 @@ Using Enums
 4. use the variable in your path operation
 
 
+What is an Enum? in simple terms, Enums (shorthand for enumerations) is a set of symbolic names (members) bound to unique values, can be iterated over to return its canonical members in definition order, uses call syntax to return members by value and uses index syntax to return members by name (check this link for python documentation  https://docs.python.org/3/library/enum.html )
+
 
