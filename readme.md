@@ -54,4 +54,15 @@ ORDER MATTERS
 When creating path operations you need to declare them in order from most specific to least specific. similarly you cannot redefine a path operation with the same path, the first one will be used since the path matches first.
 
 
+Using Enums
+
+1. start by importing the Enum class from the enum module by using: from enum import Enum
+
+2. create a class that inherits from the Enum class (check the example in main.py)
+
+3. create a variable of the class and assign it to a path operation
+
+4. use the variable in your path operation
+
+
 
