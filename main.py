@@ -2,6 +2,18 @@
 # import fastapi as fastapi
 from fastapi import FastAPI, HTTPException
 
+# Import Enum for creating Enums
+from enum import Enum
+
+
+# define the Enum class
+class ModelName(str, Enum):
+    alexnet = "alexnet"
+    resnet = "resnet"
+    lenet = "lenet"
+
+
+
 # define the app as a FastAPI object
 app = FastAPI()
 
@@ -21,5 +33,17 @@ async def root():
 @app.get("/charecters/{charecter_id}")
 async def get_char(charecter_id: int):
     return {"charecter_id": charecter_id}
+
+# path parameters with a type annotation using the enum class previously created
+@app.get("/models/{model_name}")
+async def get_model(model_name: ModelName):
+    if model_name == ModelName.alexnet:
+        return {"model_name": model_name, "message": "Deep Learning FTW!"}
+
+    if model_name.value == "lenet":
+        return {"model_name": model_name, "message": "LeCNN all the images"}
+
+    return {"model_name": model_name, "message": "Have some residuals"}
+
 
 
