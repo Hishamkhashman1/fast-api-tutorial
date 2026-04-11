@@ -12,7 +12,8 @@ class ModelName(str, Enum):
     resnet = "resnet"
     lenet = "lenet"
 
-
+# make fake database
+fake_items_db = [{"item_name": "Rick"}, {"item_name": "Morty"},{"item_name": "Beth"},{"item_name": "Jerry"},{"item_name": "Summer"}]
 
 # define the app as a FastAPI object
 app = FastAPI()
@@ -46,4 +47,8 @@ async def get_model(model_name: ModelName):
     return {"model_name": model_name, "message": "Have some residuals"}
 
 
+# Query parameters example
+@app.get("/items/")
+async def read_item(skip: int = 0, limit: int=10):
+    return fake_items_db[skip : skip + limit]
 
