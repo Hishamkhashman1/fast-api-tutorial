@@ -6,11 +6,22 @@ from fastapi import FastAPI, HTTPException
 from enum import Enum
 
 
+# import pydantic basemodel
+from pydantic import BaseModel
+
 # define the Enum class
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
     lenet = "lenet"
+
+
+# create basemodel for pydantic
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    frequent_appearance: bool
+
 
 # make fake database
 fake_items_db = [{"item_name": "Rick"}, {"item_name": "Morty"},{"item_name": "Beth"},{"item_name": "Jerry"},{"item_name": "Summer"}]
@@ -51,4 +62,10 @@ async def get_model(model_name: ModelName):
 @app.get("/items/")
 async def read_item(skip: int = 0, limit: int=10):
     return fake_items_db[skip : skip + limit]
+
+
+# Request body exmple
+@app.post("/items/")
+async def create_item(item: Item):
+    return item
 

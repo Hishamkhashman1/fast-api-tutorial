@@ -112,3 +112,20 @@ Query parameters
 Inside the decorator @path and in the def function, you can use query parameters such as skip limit for viewing (in case of @get) to view specific data from the DB by thier order.
 
 you can also use query parameters to declare optional parameters such as type (int str bool etc etc)
+
+see examples in main.py
+
+
+Request Body
+
+
+You can use request body to send data from a client (maybe a browser for example) to your API.
+
+a request body is data sent by the client to your API. a response body is the data your API sends to the client.
+
+API has to alwyas send a response body to the client. but clients dont necessarily need to send a request body. sometimes they could only request a path (maybe with some query parameters) but dont send a body.
+
+
+to declare a request body you can use pydantic models (check the example in main.py) check this documentation link for pydantic https://pydantic.dev/docs/validation//get-started/
+
+
