@@ -1,3 +1,42 @@
+Hello! before we deep dive in FastAPI , we have to understand what is FastAPI , what is an API? why do we need it? and how it does it work?
+
+FastAPI is a web framework for building APIs with Python. simple right?
+
+What is an API?
+
+API: short for Application Programming Interface, a set of rules for communication between different software components.
+
+Think of it as a bridge between different systems, allowing them to communicate with each other without knowing the underlying implementation details of these systems.
+
+
+
+How does an API work?
+
+APIs work with HTTP requests and responses.
+
+When a client sends a request to a server, the server processes the request and sends a response back to the client.
+
+the client and server communicate using HTTP methods such as GET, POST, PUT, DELETE, etc.
+
+the client sends the request to the server, and the server processes the request and sends a response back to the client.
+
+the server then sends the response back to the client.
+
+the client then processes the response and displays it to the user.
+
+
+Common types of APIs:
+
+REST APIs: Representational State Transfer APIs, which use HTTP methods such as GET, POST, PUT, DELETE, etc. to perform actions on resources.
+
+GraphQL APIs: APIs that use GraphQL to query and mutate data.
+
+SOAP APIs: APIs that use SOAP (Simple Object Access Protocol) to query and mutate data.
+
+Now that we have all the theoritical part covered, lets move on to the practical part
+
+starting with setup:
+
 Instructions for Linx
 
 Inititate a venv , I highly recommend doing it this way
